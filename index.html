@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============ SEO: primary ============ -->
+<!-- TBD: replace https://www.campbellcyberconsulting.com with the final domain (canonical, og:url, og:image, JSON-LD). -->
+<title>Palo Alto Firewall Consulting, St. Louis &amp; Metro East | Campbell Cyber</title>
+<meta name="description" content="Independent Palo Alto firewall consultant for MSPs, businesses, schools, and local governments. Health checks, migrations, and retainers with upfront pricing.">
+<link rel="canonical" href="https://www.campbellcyberconsulting.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1A3963">
+<meta name="geo.region" content="US-IL">
+<meta name="geo.placename" content="Glen Carbon">
+
+<!-- ============ Social ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Campbell Cyber Consulting">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Palo Alto Firewall Consulting | Campbell Cyber Consulting">
+<meta property="og:description" content="Palo Alto firewall health checks, migrations, and retainer support for MSPs and IT teams in the St. Louis metro. Clear scope. Upfront pricing.">
+<meta property="og:url" content="https://www.campbellcyberconsulting.com/">
+<meta property="og:image" content="https://www.campbellcyberconsulting.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Campbell Cyber Consulting logo">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ============ Icons ============ -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- ============ Fonts ============
+     Brand spec: Gotham (headings) + Lato (body). Gotham needs a web license (Monotype/Hoefler).
+     Montserrat is the free stand-in until it's licensed. Self-host both for best Core Web Vitals. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&display=swap">
+
+<!-- Preload the LCP-adjacent logo -->
+<link rel="preload" as="image" href="assets/logo-light.webp" type="image/webp">
+
+<!-- ============ Structured data ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.campbellcyberconsulting.com/#business",
+      "name": "Campbell Cyber Consulting",
+      "url": "https://www.campbellcyberconsulting.com/",
+      "logo": "https://www.campbellcyberconsulting.com/assets/logo.png",
+      "image": "https://www.campbellcyberconsulting.com/assets/og-image.jpg",
+      "description": "Independent Palo Alto firewall consulting for managed service providers, small and mid-size businesses, schools, and local governments in the St. Louis metro and Metro East.",
+      "slogan": "Palo Alto Security. Done Right.",
+      "telephone": "+1-217-691-0994",
+      "email": "hello@campbellcyberconsulting.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Glen Carbon",
+        "addressRegion": "IL",
+        "postalCode": "62034",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 38.7484, "longitude": -89.9831 },
+      "areaServed": [
+        { "@type": "City", "name": "Glen Carbon, IL" },
+        { "@type": "City", "name": "Edwardsville, IL" },
+        { "@type": "City", "name": "Collinsville, IL" },
+        { "@type": "City", "name": "Belleville, IL" },
+        { "@type": "City", "name": "O'Fallon, IL" },
+        { "@type": "City", "name": "St. Louis, MO" },
+        { "@type": "AdministrativeArea", "name": "Metro East, Illinois" }
+      ],
+      "knowsAbout": [
+        "Palo Alto Networks firewalls",
+        "PAN-OS",
+        "Panorama",
+        "GlobalProtect",
+        "Firewall migration",
+        "Firewall health check",
+        "Network security"
+      ],
+      "founder": { "@id": "https://www.campbellcyberconsulting.com/#noah-campbell" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Palo Alto firewall services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#health-check" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#migration" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#retainer" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#msp-partner" } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.campbellcyberconsulting.com/#noah-campbell",
+      "name": "Noah Campbell",
+      "jobTitle": "Founder and Principal Consultant",
+      "worksFor": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "knowsAbout": ["Palo Alto Networks firewalls", "PAN-OS", "Network security"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.campbellcyberconsulting.com/#health-check",
+      "name": "Palo Alto Firewall Health Check",
+      "serviceType": "Firewall health check and security assessment",
+      "provider": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "areaServed": "St. Louis metro and Metro East",
+      "description": "A fixed-scope review of PAN-OS version, security policy, threat prevention profiles, high availability, and logging, delivered as a prioritized written report."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.campbellcyberconsulting.com/#migration",
+      "name": "Firewall Migration to Palo Alto",
+      "serviceType": "Firewall migration",
+      "provider": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "areaServed": "St. Louis metro and Metro East",
+      "description": "Planned migration from Cisco, Fortinet, SonicWall, and other third-party firewalls to Palo Alto Networks next-generation firewalls, including rule conversion, cutover, and rollback planning."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.campbellcyberconsulting.com/#retainer",
+      "name": "Palo Alto Consulting Retainer",
+      "serviceType": "Firewall consulting retainer",
+      "provider": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "areaServed": "St. Louis metro and Metro East",
+      "description": "A monthly block of on-call Palo Alto firewall expertise for troubleshooting, changes, upgrades, and design reviews."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.campbellcyberconsulting.com/#msp-partner",
+      "name": "White-Label Palo Alto Support for MSPs",
+      "serviceType": "Managed service provider partner support",
+      "provider": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "areaServed": "St. Louis metro and Metro East",
+      "description": "Palo Alto firewall engineering for managed service providers, available as one-off project help or white-label services you can resell to your clients."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.campbellcyberconsulting.com/#website",
+      "url": "https://www.campbellcyberconsulting.com/",
+      "name": "Campbell Cyber Consulting",
+      "publisher": { "@id": "https://www.campbellcyberconsulting.com/#business" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.campbellcyberconsulting.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are you affiliated with Palo Alto Networks?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Campbell Cyber Consulting is an independent consultancy that specializes in Palo Alto Networks firewalls. We aren't affiliated with or endorsed by Palo Alto Networks, so our recommendations are based on what your environment needs, not on a sales quota." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with MSPs on a white-label basis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Managed service providers can bring us in for one-off projects, overflow capacity, or as a white-label Palo Alto specialist they resell to their own clients at a markup. We work under your brand and your process, and the client relationship stays yours." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Palo Alto firewall health check include?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A health check reviews your PAN-OS version and upgrade path, security policy and rule hygiene, threat prevention and URL filtering profiles, decryption, high availability, GlobalProtect, logging, and administrative access. You get a written report that ranks findings by risk, with clear next steps." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which firewalls can you migrate to Palo Alto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We migrate from common third-party platforms, including Cisco ASA and Firepower, Fortinet FortiGate, SonicWall, and WatchGuard. Each migration includes a rule review, conversion, a tested cutover plan, and a rollback plan." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Palo Alto firewall consulting cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Health checks are a fixed price per firewall or HA pair. Migrations are quoted as a fixed project price after a short discovery call. Retainers are a monthly block of hours. See the pricing section for starting prices." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work on-site or remotely?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Both. We're based in Glen Carbon, Illinois, and work on-site across the St. Louis metro and Metro East. Most health checks and retainer work happen remotely over a secure session." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#1A3963; --blue:#235592; --gold:#FBAF59; --orange:#F78E48; --red:#F05143; --white:#FFFFFF;
+  --ink:#14233a; --body:#3d4b60; --muted:#5c6b80; --bg-soft:#F4F7FB; --line:#DCE4EE;
+  --navy-deep:#0f2440;
+  --font-head:"Gotham","Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Lato",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:6px; --max:1440px; --gutter:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;color:var(--body);background:var(--white)}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-head);color:var(--navy);line-height:1.08;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6vw,4.25rem);font-weight:800;text-transform:uppercase}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;text-transform:uppercase}
+h3{font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+p{margin:0 0 1em}
+.dot{color:var(--orange)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.section{padding:clamp(64px,9vw,112px) 0}
+.soft{background:var(--bg-soft)}
+.eyebrow{display:flex;align-items:center;gap:14px;font-family:var(--font-head);font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+.eyebrow::before{content:"";width:48px;height:3px;background:var(--orange);flex:none}
+.lede{font-size:1.15rem;max-width:62ch}
+.skip{position:absolute;left:-9999px;top:0;background:var(--orange);color:var(--navy);padding:10px 16px;z-index:100;font-weight:700}
+.skip:focus{left:16px;top:16px}
+.tbd{background:#fff3c4;color:#6b4b00;border:1px dashed #d9a400;border-radius:3px;padding:0 .3em;font-weight:700;white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:.95rem;text-decoration:none;padding:15px 26px;border-radius:4px;border:2px solid transparent;transition:transform .15s ease,background .15s ease,box-shadow .15s ease;cursor:pointer;line-height:1.2}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--orange);color:var(--navy)}
+.btn-primary:hover{background:#f9a06a;transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(247,142,72,.7)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-outline{border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(15,36,64,.96);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.brand img{width:190px;height:auto}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav-links a{color:#e6edf7;text-decoration:none;font-family:var(--font-head);font-weight:600;font-size:.92rem}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{padding:12px 20px}
+.menu-btn{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+.menu-btn svg{width:28px;height:28px}
+@media (max-width:960px){
+  .menu-btn{display:block}
+  .nav-cta{display:none}
+  .nav-links{position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--navy-deep);padding:8px var(--gutter) 20px;display:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:1rem}
+}
+
+/* Hero (design B layout, dark) */
+.topbar{height:5px;background:linear-gradient(90deg,#1A3963 0%,#8a4a6e 30%,#F05143 62%,#F78E48 100%)}
+.hero{position:relative;overflow:hidden;color:#dbe5f2;background:
+  radial-gradient(60% 70% at 88% 30%,rgba(35,85,146,.55) 0%,rgba(35,85,146,0) 70%),
+  radial-gradient(40% 50% at 100% 100%,rgba(247,142,72,.16) 0%,rgba(247,142,72,0) 70%),
+  linear-gradient(180deg,#0f2440 0%,#0b1b31 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(143,186,240,.18) 1px,transparent 1.4px);background-size:22px 22px;-webkit-mask-image:linear-gradient(100deg,transparent 30%,#000 75%);mask-image:linear-gradient(100deg,transparent 30%,#000 75%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(64px,8vw,104px)}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
+.hero .label{font-family:var(--font-mono);font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--orange);margin:0 0 16px;display:block}
+.hero .label::before{content:"// "}
+.hero h1{color:#fff;text-transform:none;letter-spacing:-.025em;line-height:1.04;font-size:clamp(2.4rem,4.4vw,4.6rem)}
+.hero h1 .line2{display:block}
+.grad-text{background:linear-gradient(90deg,#F05143 0%,#F78E48 55%,#FBAF59 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{color:#c9d6e7;margin-top:8px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:34px 0 0;padding:0;list-style:none;font-family:var(--font-mono);font-size:.82rem;color:#9fb3cd}
+.hero-meta li::before{content:"✓ ";color:var(--orange);font-weight:600}
+.report{margin:0;background:#132c4c;color:#cfdaea;border-radius:14px;border:1px solid rgba(143,186,240,.18);box-shadow:0 40px 90px -40px rgba(0,0,0,.75);overflow:hidden;font-family:var(--font-mono);font-size:.86rem}
+.report-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#0e2341;border-bottom:1px solid rgba(255,255,255,.08)}
+.report-bar i{width:11px;height:11px;border-radius:50%;display:block}
+.report-bar i:first-child{background:var(--red)}.report-bar i:nth-child(2){background:var(--orange)}.report-bar i:nth-child(3){background:var(--gold)}
+.report-bar span{margin-left:10px;color:#9fb3cd;font-size:.8rem}
+.report-bar em{margin-left:auto;font-style:normal;color:var(--navy);background:var(--gold);border-radius:4px;padding:1px 8px;font-size:.72rem;font-weight:600}
+.report dl{margin:0;padding:20px 22px 8px;display:grid;grid-template-columns:auto 1fr;gap:12px 20px}
+.report dt{color:#8ea3bf}
+.report dd{margin:0;color:#fff}
+.sev{display:inline-flex;align-items:center;gap:6px;margin-right:12px;white-space:nowrap}
+.sev::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
+.sev.c{color:#ff7a6c}.sev.h{color:var(--orange)}.sev.m{color:var(--gold)}
+.report-foot{padding:14px 22px 20px;color:#8ea3bf;border-top:1px dashed rgba(255,255,255,.12);margin-top:12px}
+.report-foot b{color:var(--orange);font-weight:600}
+.report-grad{height:5px;background:linear-gradient(90deg,#1A3963 0%,#8a4a6e 30%,#F05143 62%,#F78E48 100%)}
+
+/* Trust bar */
+.trust{background:var(--navy-deep);color:#c7d4e6;border-top:1px solid rgba(255,255,255,.06)}
+.trust ul{list-style:none;margin:0;padding:22px 0;display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:space-between}
+.trust li{display:flex;align-items:center;gap:10px;font-size:.95rem}
+.trust svg{width:20px;height:20px;color:var(--orange);flex:none}
+
+/* Services */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,64px);align-items:start}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media (max-width:620px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+.card:hover{box-shadow:0 18px 40px -24px rgba(26,57,99,.45);transform:translateY(-2px)}
+.card .icon{width:44px;height:44px;color:var(--navy);margin-bottom:16px}
+.card p{font-size:1rem}
+.card ul{margin:0 0 18px;padding-left:1.1em;font-size:.95rem;color:var(--muted)}
+.card ul li{margin-bottom:4px}
+.card .more{margin-top:auto;font-family:var(--font-head);font-weight:700;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:.92rem}
+.card .more svg{width:16px;height:16px;color:var(--orange)}
+.sticky-col{position:sticky;top:110px}
+@media (max-width:900px){.sticky-col{position:static}}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+@media (max-width:1060px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.pricing-grid{grid-template-columns:1fr}}
+.price{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column}
+.price.featured{border-top-color:var(--orange);box-shadow:0 24px 48px -28px rgba(26,57,99,.5)}
+.price .tag{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;min-height:1em}
+.price .amount{font-family:var(--font-head);font-weight:800;color:var(--navy);font-size:1.6rem;line-height:1.1;margin:8px 0 2px}
+.price .unit{font-size:.9rem;color:var(--muted);margin-bottom:16px}
+.price ul{list-style:none;padding:0;margin:0 0 22px;font-size:.95rem}
+.price li{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--bg-soft)}
+.price li svg{width:18px;height:18px;color:var(--blue);flex:none;margin-top:4px}
+.price .btn{margin-top:auto;justify-content:center}
+.fineprint{margin-top:24px;font-size:.92rem;color:var(--muted);max-width:80ch}
+
+/* Audiences */
+.aud-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:44px;border-top:1px solid var(--line)}
+@media (max-width:960px){.aud-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.aud-grid{grid-template-columns:1fr}}
+.aud{padding:30px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.aud:last-child{border-right:0}
+.aud svg{width:48px;height:48px;color:var(--navy);margin-bottom:14px}
+.aud p{font-size:.98rem;margin:0}
+.head-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+@media (max-width:860px){.head-row{grid-template-columns:1fr;gap:8px}}
+
+/* MSP band */
+.msp{background:linear-gradient(110deg,var(--navy) 0%,var(--blue) 55%,#3d5f95 100%);color:#e4ecf6;position:relative;overflow:hidden}
+.msp::after{content:"";position:absolute;inset:auto -10% -60% 45%;height:120%;background:radial-gradient(closest-side,rgba(247,142,72,.35),transparent 70%);pointer-events:none}
+.msp h2{color:#fff}
+.msp .eyebrow{color:#c7d4e6}
+.msp-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media (max-width:900px){.msp-grid{grid-template-columns:1fr}}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checks li{display:flex;gap:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:16px 18px}
+.checks svg{width:22px;height:22px;color:var(--orange);flex:none;margin-top:2px}
+.checks strong{color:#fff;display:block;font-family:var(--font-head);font-size:.98rem}
+
+/* Process: timeline */
+.trace{list-style:none;padding:0;margin:56px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.trace::before{content:"";position:absolute;top:13px;left:14px;right:14px;height:4px;background:var(--orange);border-radius:2px}
+.trace li{position:relative;padding-top:48px}
+.trace li::before{content:"";position:absolute;top:0;left:0;width:30px;height:30px;border-radius:50%;background:#fff;border:5px solid var(--orange);box-sizing:border-box}
+.trace .t{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);display:block;margin-bottom:6px}
+.trace p{font-size:.98rem;margin:0}
+@media (max-width:860px){
+  .trace{grid-template-columns:1fr;gap:28px}
+  .trace::before{top:14px;bottom:14px;left:13px;right:auto;width:4px;height:auto}
+  .trace li{padding:0 0 0 52px}
+}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+@media (max-width:900px){.about{grid-template-columns:1fr}}
+.about-media{position:relative;background:linear-gradient(160deg,#0f2440 0%,#1A3963 45%,#235592 70%,#F78E48 120%);display:flex;align-items:center;padding:56px clamp(24px,5vw,72px);overflow:hidden;min-height:380px}
+.about-media .shield{position:absolute;right:-40px;bottom:-40px;width:340px;opacity:.16}
+.values{position:relative;border-left:3px solid var(--orange);padding-left:26px;font-family:var(--font-head);font-weight:600;color:#fff;letter-spacing:.2em;text-transform:uppercase;font-size:.9rem;line-height:2.4;list-style:none;margin:0}
+.about-copy{padding:clamp(56px,7vw,96px) clamp(24px,5vw,72px);background:var(--bg-soft)}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 26px;padding:0;list-style:none}
+.creds li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:700;color:var(--navy)}
+
+/* Why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media (max-width:960px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+.why{padding:26px 24px;border-left:3px solid var(--orange);background:var(--bg-soft);border-radius:0 var(--radius) var(--radius) 0}
+.why p{margin:0;font-size:.98rem}
+
+/* FAQ */
+.faq{max-width:860px;margin:36px auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;position:relative;font-family:var(--font-head);font-weight:700;color:var(--navy);font-size:1.05rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--orange);font-weight:600}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 22px;margin:0;max-width:75ch}
+.center{text-align:center}
+.center .eyebrow{justify-content:center}
+
+/* Contact */
+.contact{background:radial-gradient(120% 120% at 0% 100%,#235592 0%,#1A3963 45%,#0f2440 100%);color:#dbe5f2}
+.contact h2{color:#fff}
+.contact .eyebrow{color:#c7d4e6}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.contact-list{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.contact-list a{color:#fff;text-decoration:none;font-weight:700}
+.contact-list a:hover{color:var(--orange)}
+.contact-list li{display:flex;gap:12px;align-items:center}
+.contact-list svg{width:20px;height:20px;color:var(--orange);flex:none}
+form{background:#fff;border-radius:var(--radius);padding:clamp(24px,4vw,40px);color:var(--body);display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+form .full{grid-column:1/-1}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+label{display:block;font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);padding:12px 14px;border:1px solid #c5d1df;border-radius:4px;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:0;border-color:var(--blue)}
+textarea{min-height:120px;resize:vertical}
+.form-note{font-size:.85rem;color:var(--muted);margin:0}
+
+/* Footer */
+footer{background:#0b1b31;color:#9fb0c6;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding:56px 0 36px}
+@media (max-width:860px){.foot{grid-template-columns:1fr}}
+footer h2{font-size:.85rem;letter-spacing:.16em;color:#fff;margin-bottom:14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{color:#c7d4e6;text-decoration:none}
+footer a:hover{color:var(--orange)}
+.legal{border-top:1px solid rgba(255,255,255,.08);padding:22px 0 30px;font-size:.82rem;color:#7f91a8}
+.legal p{margin:0 0 6px}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" aria-hidden="true"></div>
+
+<!-- Reusable inline icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M24 5l15 6v11c0 10-6.5 17.5-15 21-8.5-3.5-15-11-15-21V11z"/><path d="M17 24l5 5 9-10" stroke-linecap="round"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9" width="38" height="26" rx="3"/><path d="M10 23h7l3-7 5 13 3-6h10M17 41h14M24 35v6"/></symbol>
+    <symbol id="i-migrate" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="14" height="10" rx="2"/><rect x="30" y="28" width="14" height="10" rx="2"/><path d="M11 20v7a4 4 0 004 4h11M22 27l4 4-4 4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 13v11l7 5"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="13" r="5"/><circle cx="33" cy="13" r="5"/><path d="M5 38v-4a8 8 0 018-8h4a8 8 0 018 8v4M23 38v-4a8 8 0 018-8h4a8 8 0 018 8v4"/></symbol>
+    <symbol id="i-building" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 43V9l16-4v38M24 43V17l16 4v22M4 43h40M13 14h5M13 21h5M13 28h5M13 35h5M30 26h5M30 33h5"/></symbol>
+    <symbol id="i-school" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18L24 8l20 10-20 10z"/><path d="M12 22v10c0 3 5 6 12 6s12-3 12-6V22M44 18v12"/></symbol>
+    <symbol id="i-gov" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L24 7l18 11zM10 18v18M18 18v18M30 18v18M38 18v18M5 41h38M7 36h34"/></symbol>
+    <symbol id="i-network" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="5" width="14" height="10" rx="2"/><rect x="4" y="33" width="12" height="10" rx="2"/><rect x="18" y="33" width="12" height="10" rx="2"/><rect x="32" y="33" width="12" height="10" rx="2"/><path d="M24 15v10M10 33v-8h28v8M24 25v8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.1 7-12a7 7 0 10-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="Campbell Cyber Consulting home">
+      <picture>
+        <source srcset="assets/logo-light.webp" type="image/webp">
+        <img src="assets/logo-light.png" alt="Campbell Cyber Consulting" width="190" height="46">
+      </picture>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#msp">For MSPs</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="#contact">Let’s Talk Security <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="label">Palo Alto firewall specialist · Glen Carbon, IL</span>
+      <h1 id="hero-title">Palo Alto firewall consulting <span class="line2 grad-text">you can trust.</span></h1>
+      <p class="lede">Independent Palo Alto Networks expertise for MSPs, IT teams, schools, and local governments across St. Louis and the Metro East. Health checks, migrations, and on-call support, with clear scope and upfront pricing.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Let’s Talk Security <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <ul class="hero-meta">
+        <li>Upfront pricing</li>
+        <li>Fixed project quotes</li>
+        <li>MSP white-label ready</li>
+      </ul>
+    </div>
+
+    <figure class="report" aria-label="Sample health check report preview">
+      <div class="report-bar" aria-hidden="true"><i></i><i></i><i></i><span>health-check-report.pdf</span><em>SAMPLE</em></div>
+      <dl>
+        <dt>Device</dt><dd>PA-series HA pair</dd>
+        <dt>PAN-OS</dt><dd>Current → recommended upgrade path</dd>
+        <dt>Policy</dt><dd>Unused, shadowed, and overly broad rules flagged</dd>
+        <dt>Profiles</dt><dd>Threat, URL, WildFire, decryption</dd>
+        <dt>Findings</dt><dd><span class="sev c">Critical</span><span class="sev h">High</span><span class="sev m">Medium</span></dd>
+        <dt>Next step</dt><dd>Prioritized fix list + team walkthrough</dd>
+      </dl>
+      <figcaption class="report-foot">What you get from a <b>firewall health check</b>: a plain-language report ranked by risk.</figcaption>
+      <div class="report-grad" aria-hidden="true"></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= TRUST BAR ================= -->
+<section class="trust" aria-label="Highlights">
+  <div class="wrap">
+    <ul>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> Palo Alto specialist, not a generalist</span></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> <span class="tbd">[TBD: PCNSE / certs]</span></span></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> <span><span class="tbd">[TBD]</span>+ years in enterprise network security</span></span></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> MSP-friendly, white-label ready</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="wrap split">
+    <div class="sticky-col">
+      <p class="eyebrow">How we help</p>
+      <h2 id="services-title">Palo Alto firewall services<span class="dot">.</span></h2>
+      <p class="lede">Most organizations under $20M in revenue can’t justify a full-time Palo Alto engineer. You still need one when a firewall upgrade, migration, or outage lands on your desk.</p>
+      <p>Campbell Cyber Consulting fills that gap. You get senior-level Palo Alto Networks expertise when you need it, scoped in plain language, without a big-firm sales process.</p>
+      <a class="btn btn-outline" href="#pricing">Compare pricing <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="cards">
+      <article class="card" id="health-check">
+        <svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg>
+        <h3>Firewall health checks</h3>
+        <p>Find out what’s misconfigured, outdated, or exposed, and what to fix first.</p>
+        <ul>
+          <li>PAN-OS version and upgrade path</li>
+          <li>Security policy and rule cleanup</li>
+          <li>Threat, URL, and decryption profiles</li>
+          <li>HA, logging, and admin access review</li>
+        </ul>
+        <a class="more" href="#pricing">See health check pricing <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="card" id="migration">
+        <svg class="icon" aria-hidden="true"><use href="#i-migrate"/></svg>
+        <h3>Migrations to Palo Alto</h3>
+        <p>Move from a third-party firewall to Palo Alto without surprises on cutover night.</p>
+        <ul>
+          <li>Cisco, Fortinet, SonicWall, and WatchGuard</li>
+          <li>Rule review and conversion</li>
+          <li>Tested cutover and rollback plan</li>
+          <li>Post-cutover tuning and handoff</li>
+        </ul>
+        <a class="more" href="#pricing">See migration pricing <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="card" id="retainer">
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+        <h3>Consulting retainer</h3>
+        <p>A Palo Alto expert on call for your team, billed as a predictable monthly block.</p>
+        <ul>
+          <li>Troubleshooting and outage help</li>
+          <li>Change reviews and PAN-OS upgrades</li>
+          <li>GlobalProtect and Panorama support</li>
+          <li>Design and architecture reviews</li>
+        </ul>
+        <a class="more" href="#pricing">See retainer pricing <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+
+      <article class="card" id="msp-partner">
+        <svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg>
+        <h3>MSP partner support</h3>
+        <p>Add Palo Alto expertise to your service catalog without adding headcount.</p>
+        <ul>
+          <li>One-off project help</li>
+          <li>Overflow capacity for busy weeks</li>
+          <li>White-label work you can resell</li>
+          <li>Works inside your tools and process</li>
+        </ul>
+        <a class="more" href="#msp">How MSP partnering works <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section soft" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Transparent pricing</p>
+        <h2 id="pricing-title">Know the cost before we start<span class="dot">.</span></h2>
+      </div>
+      <p class="lede">IT managers shouldn’t have to book a sales call to get a ballpark. These are starting prices. Every engagement gets a written, fixed quote before any work begins.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price">
+        <p class="tag">One-time</p>
+        <h3>Health check</h3>
+        <p class="amount">From $<span class="tbd">[TBD]</span></p>
+        <p class="unit">per firewall or HA pair</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Full configuration review</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Risk-ranked written report</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Walkthrough call with your team</span></li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Book a health check</a>
+      </article>
+
+      <article class="price">
+        <p class="tag">Project</p>
+        <h3>Migration</h3>
+        <p class="amount">From $<span class="tbd">[TBD]</span></p>
+        <p class="unit">fixed price, quoted after discovery</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Rule conversion and cleanup</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Cutover and rollback plan</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><span class="tbd">[TBD]</span> days of post-cutover support</span></li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Scope a migration</a>
+      </article>
+
+      <article class="price featured">
+        <p class="tag">Most flexible</p>
+        <h3>Retainer</h3>
+        <p class="amount">From $<span class="tbd">[TBD]</span>/mo</p>
+        <p class="unit">includes <span class="tbd">[TBD]</span> hours per month</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Priority response, <span class="tbd">[TBD]</span>-hour target</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Upgrades, changes, and troubleshooting</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Discounted rate for extra hours</span></li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Start a retainer</a>
+      </article>
+
+      <article class="price">
+        <p class="tag">As needed</p>
+        <h3>Hourly</h3>
+        <p class="amount">$<span class="tbd">[TBD]</span>/hr</p>
+        <p class="unit"><span class="tbd">[TBD]</span>-hour minimum</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>One-off fixes and questions</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Remote or on-site</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>MSP partner rates available</span></li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Get help now</a>
+      </article>
+    </div>
+    <p class="fineprint">Final pricing depends on the number of firewalls, PAN-OS version, HA setup, and whether you use Panorama. On-site work outside the St. Louis metro may include travel. Hardware and Palo Alto Networks licensing aren’t included.</p>
+  </div>
+</section>
+
+<!-- ================= WHO WE SERVE ================= -->
+<section class="section" id="industries" aria-labelledby="industries-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Who we work with</p>
+        <h2 id="industries-title">Security for what moves you<span class="dot">.</span></h2>
+      </div>
+      <p class="lede">From MSPs managing dozens of client firewalls to a school district with one HA pair, we tailor the work to your environment and your team.</p>
+    </div>
+    <div class="aud-grid">
+      <div class="aud">
+        <svg aria-hidden="true"><use href="#i-network"/></svg>
+        <h3>Managed service providers</h3>
+        <p>Palo Alto depth for your bench, on your terms and under your brand.</p>
+      </div>
+      <div class="aud">
+        <svg aria-hidden="true"><use href="#i-building"/></svg>
+        <h3>Small and mid-size businesses</h3>
+        <p>Enterprise-grade firewall expertise without a full-time salary.</p>
+      </div>
+      <div class="aud">
+        <svg aria-hidden="true"><use href="#i-school"/></svg>
+        <h3>Schools and K-12</h3>
+        <p>Content filtering, segmentation, and upgrades that fit the school calendar.</p>
+      </div>
+      <div class="aud">
+        <svg aria-hidden="true"><use href="#i-gov"/></svg>
+        <h3>Local government</h3>
+        <p>Reliable, documented changes for municipal and county networks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MSP ================= -->
+<section class="section msp" id="msp" aria-labelledby="msp-title">
+  <div class="wrap msp-grid">
+    <div>
+      <p class="eyebrow">For MSPs</p>
+      <h2 id="msp-title">Your Palo Alto specialist, on demand<span class="dot">.</span></h2>
+      <p class="lede">Your clients run Palo Alto firewalls. Your team may not have a dedicated Palo Alto engineer, or it may not have the bandwidth for the next big project. Bring us in when you need us.</p>
+      <p>Sell our services to your clients at a markup, or use us behind the scenes. The client relationship stays yours.</p>
+      <a class="btn btn-primary" href="#contact">Become a partner <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ul class="checks">
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><strong>White-label or co-branded</strong>Work under your name, in your ticketing system.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><strong>No sales pressure on your clients</strong>We recommend what the network needs. That’s it.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><strong>Partner pricing</strong>Rates built to leave room for your margin.</div></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><strong>Clean handoffs</strong>Documentation your team can support after we leave.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="section soft" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 id="process-title">Simple from first call to handoff<span class="dot">.</span></h2>
+    <ol class="trace">
+      <li><span class="t">Step 01</span><h3>Discovery call</h3><p>A free 30-minute call to learn your environment, goals, and timeline.</p></li>
+      <li><span class="t">Step 02</span><h3>Fixed quote</h3><p>You get a written scope and price. No hourly surprises on project work.</p></li>
+      <li><span class="t">Step 03</span><h3>The work</h3><p>Changes happen in planned windows with clear communication throughout.</p></li>
+      <li><span class="t">Step 04</span><h3>Handoff</h3><p>Documentation, a walkthrough, and next steps your team can act on.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" aria-labelledby="about-title">
+  <div class="about">
+    <!-- PHOTO SLOT: replace this panel's background with a professional headshot or office/network photo (WebP, ~1200px wide, descriptive alt text). -->
+    <div class="about-media">
+      <picture>
+        <source srcset="assets/shield.webp" type="image/webp">
+        <img class="shield" src="assets/shield.png" alt="" width="240" height="275" loading="lazy">
+      </picture>
+      <ul class="values" aria-label="Brand values">
+        <li>Accountability</li>
+        <li>Technical excellence</li>
+        <li>Reliability</li>
+        <li>Approachable</li>
+        <li>Trustworthy</li>
+      </ul>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">About Campbell Cyber Consulting</p>
+      <h2 id="about-title">Practical expertise. Real impact<span class="dot">.</span></h2>
+      <p>I’m Noah Campbell, founder of Campbell Cyber Consulting. I spent <span class="tbd">[TBD]</span> years delivering Palo Alto firewall work as a consultant inside a large professional services firm. I treated every client’s network like it was my own business.</p>
+      <p>I also saw how frustrating big providers can be to work with: slow, corporate, and focused on the next upsell. So I cut out the middleman. Now I deliver the same high-quality Palo Alto engineering directly to MSPs and local organizations, with straight answers and no sales pressure.</p>
+      <ul class="creds" aria-label="Credentials">
+        <li><span class="tbd">[TBD: PCNSE]</span></li>
+        <li><span class="tbd">[TBD: other certs]</span></li>
+        <li>Based in Glen Carbon, IL</li>
+      </ul>
+      <a class="btn btn-primary" href="#contact">Work with Noah <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY / OBJECTIONS ================= -->
+<section class="section" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <p class="eyebrow">Why IT teams choose us</p>
+    <h2 id="why-title">Stronger networks. Fewer surprises<span class="dot">.</span></h2>
+    <div class="why-grid">
+      <div class="why"><h3>Deep, focused skill</h3><p>We work on Palo Alto firewalls every day. You aren’t paying for someone to learn on your network.</p></div>
+      <div class="why"><h3>Lower risk</h3><p>Every change has a plan, a maintenance window, and a rollback path.</p></div>
+      <div class="why"><h3>Predictable cost</h3><p>Published starting prices and fixed project quotes. No surprise invoices.</p></div>
+      <div class="why"><h3>Easy to work with</h3><p>One direct point of contact who answers the phone and speaks your language.</p></div>
+      <div class="why"><h3>Honest advice</h3><p>We’re independent. If you don’t need new hardware or licenses, we’ll tell you.</p></div>
+      <div class="why"><h3>Accountable</h3><p>We own the outcome and document everything, so your team stays in control.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section soft" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Palo Alto firewall questions, answered<span class="dot">.</span></h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Are you affiliated with Palo Alto Networks?</summary>
+        <p>No. Campbell Cyber Consulting is an independent consultancy that specializes in Palo Alto Networks firewalls. We aren’t affiliated with or endorsed by Palo Alto Networks, so our recommendations are based on what your environment needs, not on a sales quota.</p>
+      </details>
+      <details>
+        <summary>Do you work with MSPs on a white-label basis?</summary>
+        <p>Yes. Managed service providers can bring us in for one-off projects, overflow capacity, or as a white-label Palo Alto specialist they resell to their own clients at a markup. We work under your brand and your process, and the client relationship stays yours.</p>
+      </details>
+      <details>
+        <summary>What does a Palo Alto firewall health check include?</summary>
+        <p>A health check reviews your PAN-OS version and upgrade path, security policy and rule hygiene, threat prevention and URL filtering profiles, decryption, high availability, GlobalProtect, logging, and administrative access. You get a written report that ranks findings by risk, with clear next steps.</p>
+      </details>
+      <details>
+        <summary>Which firewalls can you migrate to Palo Alto?</summary>
+        <p>We migrate from common third-party platforms, including Cisco ASA and Firepower, Fortinet FortiGate, SonicWall, and WatchGuard. Each migration includes a rule review, conversion, a tested cutover plan, and a rollback plan.</p>
+      </details>
+      <details>
+        <summary>How much does Palo Alto firewall consulting cost?</summary>
+        <p>Health checks are a fixed price per firewall or HA pair. Migrations are quoted as a fixed project price after a short discovery call. Retainers are a monthly block of hours. See the <a href="#pricing">pricing section</a> for starting prices.</p>
+      </details>
+      <details>
+        <summary>Do you work on-site or remotely?</summary>
+        <p>Both. We’re based in Glen Carbon, Illinois, and work on-site across the St. Louis metro and Metro East. Most health checks and retainer work happen remotely over a secure session.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Let’s talk security</p>
+      <h2 id="contact-title">Get a straight answer on your firewall<span class="dot">.</span></h2>
+      <p class="lede">Tell us what you’re working on. You’ll hear back within one business day with next steps and a ballpark cost.</p>
+      <ul class="contact-list">
+        <li><svg aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+12176910994">(217) 691-0994</a></li>
+        <li><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@campbellcyberconsulting.com">hello@campbellcyberconsulting.com</a></li>
+        <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Glen Carbon, IL · Serving St. Louis and the Metro East</span></li>
+      </ul>
+    </div>
+
+    <!-- TBD: connect to a form handler (e.g., Cloudflare Pages Functions/Workers, Formspree, or WordPress form plugin). Add Turnstile for spam protection. -->
+    <form action="#" method="post" aria-label="Contact form">
+      <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+      <div><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="full">
+        <label for="f-type">I’m interested in</label>
+        <select id="f-type" name="interest">
+          <option>Firewall health check</option>
+          <option>Migration to Palo Alto</option>
+          <option>Consulting retainer</option>
+          <option>MSP partnership</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="full"><label for="f-msg">What’s going on?</label><textarea id="f-msg" name="message" placeholder="Number of firewalls, models, PAN-OS version, timeline…"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Send message <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+      <p class="form-note full">We only use your information to reply to your request.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <picture>
+        <source srcset="assets/logo-light.webp" type="image/webp">
+        <img src="assets/logo-light.png" alt="Campbell Cyber Consulting" width="210" height="50" loading="lazy">
+      </picture>
+      <p style="margin-top:16px;max-width:42ch">Independent Palo Alto firewall consulting for MSPs, businesses, schools, and local governments. Palo Alto Security. Done Right.</p>
+    </div>
+    <nav aria-label="Footer">
+      <h2>Services</h2>
+      <ul>
+        <li><a href="#health-check">Firewall health checks</a></li>
+        <li><a href="#migration">Migrations to Palo Alto</a></li>
+        <li><a href="#retainer">Consulting retainer</a></li>
+        <li><a href="#msp">MSP partner support</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Service area</h2>
+      <ul>
+        <li>Glen Carbon and Edwardsville, IL</li>
+        <li>Collinsville, Belleville, and O’Fallon, IL</li>
+        <li>St. Louis, MO</li>
+        <li>Remote support available</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>© <span id="yr">2026</span> Campbell Cyber Consulting. All rights reserved.</p>
+    <p>Palo Alto Networks, PAN-OS, Panorama, and GlobalProtect are trademarks of Palo Alto Networks, Inc. Campbell Cyber Consulting is an independent consultancy and isn’t affiliated with or endorsed by Palo Alto Networks.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.querySelector('.menu-btn'),n=document.getElementById('nav-links');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});
+  n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
