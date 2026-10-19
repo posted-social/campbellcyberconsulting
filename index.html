@@ -255,6 +255,19 @@ p{margin:0 0 1em}
   radial-gradient(60% 70% at 88% 30%,rgba(35,85,146,.55) 0%,rgba(35,85,146,0) 70%),
   radial-gradient(40% 50% at 100% 100%,rgba(247,142,72,.16) 0%,rgba(247,142,72,0) 70%),
   linear-gradient(180deg,#0f2440 0%,#0b1b31 100%)}
+/* Interactive hero background: glow + brighter grid follow the pointer */
+.hero{--mx:72%;--my:38%}
+.hero-fx{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-fx .glow{position:absolute;inset:0;background:
+  radial-gradient(600px circle at var(--mx) var(--my),rgba(52,110,190,.55),transparent 70%),
+  radial-gradient(300px circle at var(--mx) var(--my),rgba(247,142,72,.26),transparent 70%);
+  transition:opacity .4s ease}
+.hero-fx .grid{position:absolute;inset:0;background-image:radial-gradient(rgba(251,175,89,1) 1.4px,transparent 1.9px);background-size:22px 22px;
+  -webkit-mask-image:radial-gradient(300px circle at var(--mx) var(--my),#000 0%,rgba(0,0,0,.4) 45%,transparent 75%);
+  mask-image:radial-gradient(300px circle at var(--mx) var(--my),#000 0%,rgba(0,0,0,.4) 45%,transparent 75%);
+  opacity:.8;transition:opacity .4s ease}
+.hero.idle .hero-fx .grid{opacity:.3}
+@media (prefers-reduced-motion:reduce){.hero-fx .grid{opacity:.25}}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(143,186,240,.18) 1px,transparent 1.4px);background-size:22px 22px;-webkit-mask-image:linear-gradient(100deg,transparent 30%,#000 75%);mask-image:linear-gradient(100deg,transparent 30%,#000 75%);pointer-events:none}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(64px,8vw,104px)}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
@@ -469,11 +482,12 @@ footer a:hover{color:var(--orange)}
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero" id="top" aria-labelledby="hero-title">
+<section class="hero idle" id="top" aria-labelledby="hero-title">
+  <div class="hero-fx" aria-hidden="true"><div class="glow"></div><div class="grid"></div></div>
   <div class="wrap hero-grid">
     <div>
       <span class="label">Palo Alto firewall specialist · Glen Carbon, IL</span>
-      <h1 id="hero-title">Palo Alto firewall consulting <span class="line2 grad-text">you can trust.</span></h1>
+      <h1 id="hero-title">Palo Alto firewall consulting <span class="line2"><span class="grad-text">you can trust</span><span class="dot">.</span></span></h1>
       <p class="lede">Independent Palo Alto Networks expertise for MSPs, IT teams, schools, and local governments across St. Louis and the Metro East. Health checks, migrations, and on-call support, with clear scope and upfront pricing.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#contact">Let’s Talk Security <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -736,7 +750,7 @@ footer a:hover{color:var(--orange)}
     </div>
     <div class="about-copy">
       <p class="eyebrow">About Campbell Cyber Consulting</p>
-      <h2 id="about-title">Practical expertise. Real impact<span class="dot">.</span></h2>
+      <h2 id="about-title">Practical expertise<span class="dot">.</span> Real impact<span class="dot">.</span></h2>
       <p>I’m Noah Campbell, founder of Campbell Cyber Consulting. I spent <span class="tbd">[TBD]</span> years delivering Palo Alto firewall work as a consultant inside a large professional services firm. I treated every client’s network like it was my own business.</p>
       <p>I also saw how frustrating big providers can be to work with: slow, corporate, and focused on the next upsell. So I cut out the middleman. Now I deliver the same high-quality Palo Alto engineering directly to MSPs and local organizations, with straight answers and no sales pressure.</p>
       <ul class="creds" aria-label="Credentials">
@@ -753,7 +767,7 @@ footer a:hover{color:var(--orange)}
 <section class="section" id="why" aria-labelledby="why-title">
   <div class="wrap">
     <p class="eyebrow">Why IT teams choose us</p>
-    <h2 id="why-title">Stronger networks. Fewer surprises<span class="dot">.</span></h2>
+    <h2 id="why-title">Stronger networks<span class="dot">.</span> Fewer surprises<span class="dot">.</span></h2>
     <div class="why-grid">
       <div class="why"><h3>Deep, focused skill</h3><p>We work on Palo Alto firewalls every day. You aren’t paying for someone to learn on your network.</p></div>
       <div class="why"><h3>Lower risk</h3><p>Every change has a plan, a maintenance window, and a rollback path.</p></div>
@@ -881,6 +895,18 @@ footer a:hover{color:var(--orange)}
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});
   n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});
   document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+
+/* Hero pointer-follow effect (desktop pointers only; respects reduced motion) */
+(function(){
+  var h=document.querySelector('.hero');
+  if(!h||!window.matchMedia('(pointer:fine)').matches||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var tx=72,ty=38,x=tx,y=ty,raf=0;
+  function tick(){x+=(tx-x)*.12;y+=(ty-y)*.12;h.style.setProperty('--mx',x.toFixed(2)+'%');h.style.setProperty('--my',y.toFixed(2)+'%');
+    raf=(Math.abs(tx-x)>.05||Math.abs(ty-y)>.05)?requestAnimationFrame(tick):0;}
+  function go(){if(!raf)raf=requestAnimationFrame(tick);}
+  h.addEventListener('pointermove',function(e){var r=h.getBoundingClientRect();tx=(e.clientX-r.left)/r.width*100;ty=(e.clientY-r.top)/r.height*100;h.classList.remove('idle');go();});
+  h.addEventListener('pointerleave',function(){tx=72;ty=38;h.classList.add('idle');go();});
 })();
 </script>
 </body>
