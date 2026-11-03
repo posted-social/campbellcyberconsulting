@@ -90,9 +90,9 @@
         "@type": "OfferCatalog",
         "name": "Palo Alto firewall services",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#health-check" } },
-          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#migration" } },
-          { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#retainer" } },
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "1500", "priceCurrency": "USD" }, "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#health-check" } },
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "2500", "priceCurrency": "USD" }, "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#migration" } },
+          { "@type": "Offer", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1000", "priceCurrency": "USD", "unitCode": "MON" }, "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#retainer" } },
           { "@type": "Offer", "itemOffered": { "@id": "https://www.campbellcyberconsulting.com/#msp-partner" } }
         ]
       }
@@ -103,7 +103,8 @@
       "name": "Noah Campbell",
       "jobTitle": "Founder and Principal Consultant",
       "worksFor": { "@id": "https://www.campbellcyberconsulting.com/#business" },
-      "knowsAbout": ["Palo Alto Networks firewalls", "PAN-OS", "Network security"]
+      "knowsAbout": ["Palo Alto Networks firewalls", "PAN-OS", "Network security"],
+      "hasCredential": [ { "@type": "EducationalOccupationalCredential", "name": "PCNSE", "credentialCategory": "certification" }, { "@type": "EducationalOccupationalCredential", "name": "PCNSC", "credentialCategory": "certification" }, { "@type": "EducationalOccupationalCredential", "name": "CCNA", "credentialCategory": "certification" } ]
     },
     {
       "@type": "Service",
@@ -255,6 +256,22 @@ p{margin:0 0 1em}
   radial-gradient(60% 70% at 88% 30%,rgba(35,85,146,.55) 0%,rgba(35,85,146,0) 70%),
   radial-gradient(40% 50% at 100% 100%,rgba(247,142,72,.16) 0%,rgba(247,142,72,0) 70%),
   linear-gradient(180deg,#0f2440 0%,#0b1b31 100%)}
+/* Centered hero */
+.hero-center{--mx:50%;--my:42%}
+.hero-center::before{-webkit-mask-image:radial-gradient(70% 80% at 50% 45%,#000 10%,transparent 75%);mask-image:radial-gradient(70% 80% at 50% 45%,#000 10%,transparent 75%)}
+.hero-inner{position:relative;text-align:center;padding-top:clamp(72px,10vw,136px);padding-bottom:clamp(64px,9vw,120px);display:flex;flex-direction:column;align-items:center}
+.hero-inner .lede{margin-left:auto;margin-right:auto;max-width:64ch}
+.hero-inner .hero-ctas{justify-content:center}
+.hero-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:48px;max-width:1040px}
+.hero-chips a{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-decoration:none;padding:14px 20px;min-width:170px;border-radius:10px;border:1px solid rgba(143,186,240,.22);background:rgba(19,44,76,.55);backdrop-filter:blur(6px);transition:border-color .2s,transform .2s,background .2s}
+.hero-chips a:hover{border-color:var(--orange);background:rgba(19,44,76,.85);transform:translateY(-2px)}
+.hero-chips .k{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.04em;color:#9fb3cd}
+.hero-chips .v{font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:#fff}
+.hero-chips a:hover .v{color:var(--orange)}
+@media (max-width:560px){.hero-chips{gap:10px}.hero-chips a{min-width:0;flex:1 1 calc(50% - 5px);padding:12px 14px}.hero-chips .v{font-size:.95rem}}
+.hero-center .hero-fx .grid{opacity:.45}
+.hero-center.idle .hero-fx .grid{opacity:.2}
+.hero-inner .lede{text-shadow:0 1px 12px rgba(11,27,49,.9)}
 /* Interactive hero background: glow + brighter grid follow the pointer */
 .hero{--mx:72%;--my:38%}
 .hero-fx{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -269,8 +286,6 @@ p{margin:0 0 1em}
 .hero.idle .hero-fx .grid{opacity:.3}
 @media (prefers-reduced-motion:reduce){.hero-fx .grid{opacity:.25}}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(143,186,240,.18) 1px,transparent 1.4px);background-size:22px 22px;-webkit-mask-image:linear-gradient(100deg,transparent 30%,#000 75%);mask-image:linear-gradient(100deg,transparent 30%,#000 75%);pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(64px,8vw,104px)}
-@media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
 .hero .label{font-family:var(--font-mono);font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--orange);margin:0 0 16px;display:block}
 .hero .label::before{content:"// "}
 .hero h1{color:#fff;text-transform:none;letter-spacing:-.025em;line-height:1.04;font-size:clamp(2.4rem,4.4vw,4.6rem)}
@@ -278,23 +293,6 @@ p{margin:0 0 1em}
 .grad-text{background:linear-gradient(90deg,#F05143 0%,#F78E48 55%,#FBAF59 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero .lede{color:#c9d6e7;margin-top:8px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:34px 0 0;padding:0;list-style:none;font-family:var(--font-mono);font-size:.82rem;color:#9fb3cd}
-.hero-meta li::before{content:"✓ ";color:var(--orange);font-weight:600}
-.report{margin:0;background:#132c4c;color:#cfdaea;border-radius:14px;border:1px solid rgba(143,186,240,.18);box-shadow:0 40px 90px -40px rgba(0,0,0,.75);overflow:hidden;font-family:var(--font-mono);font-size:.86rem}
-.report-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#0e2341;border-bottom:1px solid rgba(255,255,255,.08)}
-.report-bar i{width:11px;height:11px;border-radius:50%;display:block}
-.report-bar i:first-child{background:var(--red)}.report-bar i:nth-child(2){background:var(--orange)}.report-bar i:nth-child(3){background:var(--gold)}
-.report-bar span{margin-left:10px;color:#9fb3cd;font-size:.8rem}
-.report-bar em{margin-left:auto;font-style:normal;color:var(--navy);background:var(--gold);border-radius:4px;padding:1px 8px;font-size:.72rem;font-weight:600}
-.report dl{margin:0;padding:20px 22px 8px;display:grid;grid-template-columns:auto 1fr;gap:12px 20px}
-.report dt{color:#8ea3bf}
-.report dd{margin:0;color:#fff}
-.sev{display:inline-flex;align-items:center;gap:6px;margin-right:12px;white-space:nowrap}
-.sev::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
-.sev.c{color:#ff7a6c}.sev.h{color:var(--orange)}.sev.m{color:var(--gold)}
-.report-foot{padding:14px 22px 20px;color:#8ea3bf;border-top:1px dashed rgba(255,255,255,.12);margin-top:12px}
-.report-foot b{color:var(--orange);font-weight:600}
-.report-grad{height:5px;background:linear-gradient(90deg,#1A3963 0%,#8a4a6e 30%,#F05143 62%,#F78E48 100%)}
 
 /* Trust bar */
 .trust{background:var(--navy-deep);color:#c7d4e6;border-top:1px solid rgba(255,255,255,.06)}
@@ -482,37 +480,23 @@ footer a:hover{color:var(--orange)}
 <main id="main">
 
 <!-- ================= HERO ================= -->
-<section class="hero idle" id="top" aria-labelledby="hero-title">
+<section class="hero hero-center idle" id="top" aria-labelledby="hero-title">
   <div class="hero-fx" aria-hidden="true"><div class="glow"></div><div class="grid"></div></div>
-  <div class="wrap hero-grid">
-    <div>
-      <span class="label">Palo Alto firewall specialist · Glen Carbon, IL</span>
-      <h1 id="hero-title">Palo Alto firewall consulting <span class="line2"><span class="grad-text">you can trust</span><span class="dot">.</span></span></h1>
-      <p class="lede">Independent Palo Alto Networks expertise for MSPs, IT teams, schools, and local governments across St. Louis and the Metro East. Health checks, migrations, and on-call support, with clear scope and upfront pricing.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">Let’s Talk Security <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="#pricing">See pricing</a>
-      </div>
-      <ul class="hero-meta">
-        <li>Upfront pricing</li>
-        <li>Fixed project quotes</li>
-        <li>MSP white-label ready</li>
-      </ul>
+  <div class="wrap hero-inner">
+    <span class="label">Palo Alto firewall specialist · Glen Carbon, IL</span>
+    <h1 id="hero-title">Palo Alto firewall consulting <span class="line2"><span class="grad-text">you can trust</span><span class="dot">.</span></span></h1>
+    <p class="lede">Independent Palo Alto Networks expertise for MSPs, IT teams, schools, and local governments across St. Louis and the Metro East. Health checks, migrations, and on-call support, with clear scope and upfront pricing.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#contact">Let’s Talk Security <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#pricing">See pricing</a>
     </div>
-
-    <figure class="report" aria-label="Sample health check report preview">
-      <div class="report-bar" aria-hidden="true"><i></i><i></i><i></i><span>health-check-report.pdf</span><em>SAMPLE</em></div>
-      <dl>
-        <dt>Device</dt><dd>PA-series HA pair</dd>
-        <dt>PAN-OS</dt><dd>Current → recommended upgrade path</dd>
-        <dt>Policy</dt><dd>Unused, shadowed, and overly broad rules flagged</dd>
-        <dt>Profiles</dt><dd>Threat, URL, WildFire, decryption</dd>
-        <dt>Findings</dt><dd><span class="sev c">Critical</span><span class="sev h">High</span><span class="sev m">Medium</span></dd>
-        <dt>Next step</dt><dd>Prioritized fix list + team walkthrough</dd>
-      </dl>
-      <figcaption class="report-foot">What you get from a <b>firewall health check</b>: a plain-language report ranked by risk.</figcaption>
-      <div class="report-grad" aria-hidden="true"></div>
-    </figure>
+    <nav class="hero-chips" aria-label="Services and starting prices">
+      <a href="#health-check"><span class="k">Health checks</span><span class="v">from $1,500</span></a>
+      <a href="#migration"><span class="k">Migrations</span><span class="v">from $2,500</span></a>
+      <a href="#retainer"><span class="k">Retainer</span><span class="v">from $1,000/mo</span></a>
+      <a href="#pricing"><span class="k">Hourly</span><span class="v">$250/hr</span></a>
+      <a href="#msp"><span class="k">MSP partners</span><span class="v">white-label</span></a>
+    </nav>
   </div>
 </section>
 
@@ -521,8 +505,8 @@ footer a:hover{color:var(--orange)}
   <div class="wrap">
     <ul>
       <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> Palo Alto specialist, not a generalist</span></li>
-      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> <span class="tbd">[TBD: PCNSE / certs]</span></span></li>
-      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> <span><span class="tbd">[TBD]</span>+ years in enterprise network security</span></span></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> PCNSE, PCNSC, and CCNA certified</span></li>
+      <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> <span>4+ years in enterprise network security</span></span></li>
       <li><svg aria-hidden="true"><use href="#i-check"/></svg><span> MSP-friendly, white-label ready</span></li>
     </ul>
   </div>
@@ -610,7 +594,7 @@ footer a:hover{color:var(--orange)}
       <article class="price">
         <p class="tag">One-time</p>
         <h3>Health check</h3>
-        <p class="amount">From $<span class="tbd">[TBD]</span></p>
+        <p class="amount">From $1,500</p>
         <p class="unit">per firewall or HA pair</p>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Full configuration review</span></li>
@@ -623,7 +607,7 @@ footer a:hover{color:var(--orange)}
       <article class="price">
         <p class="tag">Project</p>
         <h3>Migration</h3>
-        <p class="amount">From $<span class="tbd">[TBD]</span></p>
+        <p class="amount">From $2,500</p>
         <p class="unit">fixed price, quoted after discovery</p>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Rule conversion and cleanup</span></li>
@@ -636,10 +620,10 @@ footer a:hover{color:var(--orange)}
       <article class="price featured">
         <p class="tag">Most flexible</p>
         <h3>Retainer</h3>
-        <p class="amount">From $<span class="tbd">[TBD]</span>/mo</p>
-        <p class="unit">includes <span class="tbd">[TBD]</span> hours per month</p>
+        <p class="amount">From $1,000/mo</p>
+        <p class="unit">includes 4 hours per month</p>
         <ul>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Priority response, <span class="tbd">[TBD]</span>-hour target</span></li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Priority response, 2-hour target</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Upgrades, changes, and troubleshooting</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Discounted rate for extra hours</span></li>
         </ul>
@@ -649,8 +633,8 @@ footer a:hover{color:var(--orange)}
       <article class="price">
         <p class="tag">As needed</p>
         <h3>Hourly</h3>
-        <p class="amount">$<span class="tbd">[TBD]</span>/hr</p>
-        <p class="unit"><span class="tbd">[TBD]</span>-hour minimum</p>
+        <p class="amount">$250/hr</p>
+        <p class="unit">2-hour minimum</p>
         <ul>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>One-off fixes and questions</span></li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Remote or on-site</span></li>
@@ -751,11 +735,12 @@ footer a:hover{color:var(--orange)}
     <div class="about-copy">
       <p class="eyebrow">About Campbell Cyber Consulting</p>
       <h2 id="about-title">Practical expertise<span class="dot">.</span> Real impact<span class="dot">.</span></h2>
-      <p>I’m Noah Campbell, founder of Campbell Cyber Consulting. I spent <span class="tbd">[TBD]</span> years delivering Palo Alto firewall work as a consultant inside a large professional services firm. I treated every client’s network like it was my own business.</p>
+      <p>I’m Noah Campbell, founder of Campbell Cyber Consulting. I spent 4 years delivering Palo Alto firewall work as a consultant inside a large professional services firm. I treated every client’s network like it was my own business.</p>
       <p>I also saw how frustrating big providers can be to work with: slow, corporate, and focused on the next upsell. So I cut out the middleman. Now I deliver the same high-quality Palo Alto engineering directly to MSPs and local organizations, with straight answers and no sales pressure.</p>
       <ul class="creds" aria-label="Credentials">
-        <li><span class="tbd">[TBD: PCNSE]</span></li>
-        <li><span class="tbd">[TBD: other certs]</span></li>
+        <li>PCNSE</li>
+        <li>PCNSC</li>
+        <li>CCNA</li>
         <li>Based in Glen Carbon, IL</li>
       </ul>
       <a class="btn btn-primary" href="#contact">Work with Noah <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -901,13 +886,14 @@ footer a:hover{color:var(--orange)}
 (function(){
   var h=document.querySelector('.hero');
   if(!h||!window.matchMedia('(pointer:fine)').matches||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-  var tx=72,ty=38,x=tx,y=ty,raf=0;
+  var tx=50,ty=42,x=tx,y=ty,raf=0;
   function tick(){x+=(tx-x)*.12;y+=(ty-y)*.12;h.style.setProperty('--mx',x.toFixed(2)+'%');h.style.setProperty('--my',y.toFixed(2)+'%');
     raf=(Math.abs(tx-x)>.05||Math.abs(ty-y)>.05)?requestAnimationFrame(tick):0;}
   function go(){if(!raf)raf=requestAnimationFrame(tick);}
   h.addEventListener('pointermove',function(e){var r=h.getBoundingClientRect();tx=(e.clientX-r.left)/r.width*100;ty=(e.clientY-r.top)/r.height*100;h.classList.remove('idle');go();});
-  h.addEventListener('pointerleave',function(){tx=72;ty=38;h.classList.add('idle');go();});
+  h.addEventListener('pointerleave',function(){tx=50;ty=42;h.classList.add('idle');go();});
 })();
+
 </script>
 </body>
 </html>
